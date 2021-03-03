@@ -1,0 +1,18 @@
+#new
+{
+ align-content: center;
+ background-color:blue;
+ color:orange;
+ height:8%;
+ width:100%;
+ margin:0px;
+}
+.list
+{
+ 
+ background-color:yellow;
+ color: red;
+ height:100%;
+ width:30%;
+ margin:0px;
+}
