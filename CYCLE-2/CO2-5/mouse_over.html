@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>EVENT HANDLING</title>
+</head>
+<body>
+<table border="5" style="text-align:center;margin-left:18%;margin-right:10%;margin-top:5%;box-shadow:10px 50px 100px 100px pink;">
+<tr><td>
+<img style="width:1000px;height:450px;" id="img1" src="img1.jpg"><br>
+<h1 id="h" style="color:blue;">YOU GET WHAT YOU WORK FOR...NOT WHAT YOU WISH FOR.....HOVER ME!!!!!</h1>
+</td></tr>
+</table><br><br>
+<script>
+document.getElementById("img1").addEventListener("mouseover",ImgMouseOver);
+document.getElementById("img1").addEventListener("mouseout",ImgMouseOut);
+document.getElementById("h").addEventListener("mouseover",TextMouseOver);
+document.getElementById("h").addEventListener("mouseout",TextMouseOut);
+function ImgMouseOver()
+{
+document.getElementById("img1").src="success2.jpg";
+}
+function ImgMouseOut()
+{
+document.getElementById("img1").src="success.jpg";
+}
+function TextMouseOver()
+{
+document.getElementById("h").style.color='crimson';
+document.getElementById("h").innerHTML="WORK FOR WHAT YOU WISH...BECAUSE HAPPINESS IS THE KEY TO SUCCESS!!!";
+}
+function TextMouseOut()
+{
+document.getElementById("h").style.color='blue';
+document.getElementById("h").innerHTML="YOU GET WHAT YOU WORK FOR...NOT WHAT YOU WISH FOR.....HOVER ME!!!!!";
+}
+</script>
+</body>
+</html>
+

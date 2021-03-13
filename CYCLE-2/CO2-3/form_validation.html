@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>Form_Validation</title>
+
+<script>
+function Regform()
+{
+	var name=document.form.name;
+	var age=document.form.age;
+	var pwd=document.form.pwd;
+	var rpwd=document.form.rpwd;
+	var email=document.form.email;
+	var mob=document.form.mob;
+	if(name.value==""){
+		alert("Please Enter Your Name ");
+		name.focus();
+		return false;
+	}
+	var n=/^[A-Za-z ]+$/;
+	if(!name.value.match(n))
+	{
+		alert("Please Enter A Valid Name");
+		name.focus();
+		return false;
+	}
+	if(age.value=="none"){
+		alert("Please Select Your Age ");
+		age.focus();
+		return false;
+	}
+	if(pwd.value==""){
+		alert("Please Enter Your Password ");
+		pwd.focus();
+		return false;
+	}
+	var pu=pwd.value.toUpperCase();
+	var pl=pwd.value.toLowerCase();
+	var pn=/\d+/;
+	if(pu==pwd.value){
+		alert("Password Must Contain Atleast One LowerCase Letter ");
+		pwd.focus();
+		return false;
+	}
+	if(!pwd.value.match(pn)){
+		alert("Password Must Contain Atleast One Digit ");
+		pwd.focus();
+		return false;
+	}
+	if(pl==pwd.value){
+		alert("Password Must Contain Atleast One UpperCase Letter ");
+		pwd.focus();
+		return false;
+	}
+	
+	if(rpwd.value==""){
+		alert("Please Retype Your Password ");
+		rpwd.focus();
+		return false;
+	}
+	if(rpwd.value!=pwd.value){
+		alert("Password Does Not Match.Please Retype Correct Password ");
+		rpwd.focus();
+		return false;
+	}
+	if(email.value==""){
+		alert("Please Enter Your Email Id ");
+		email.focus();
+		return false;
+	}
+	if(email.value.indexOf("@",0)<0)
+	{
+		alert("Please enter a valid email_id");
+		email.focus();
+		return false;
+	}
+	if(mob.value==""){
+		alert("Please Enter Your Phone Number ");
+		mob.focus();
+		return false;
+	}
+	
+	if(mob.value.length!=10)
+	{
+		alert("Please Enter A Valid Phone Number");
+		mob.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body style="background-color:lightgreen;">
+<form name="form" onsubmit="return Regform()">
+<table width="100%" align="center" border="10" cellpadding="20px" style="font-size:30px;">
+<tr><th colspan="2"style="color:brown; font-size:50px;">Registration Form</th></tr>
+<tr><th align="center">Name</th><td align="center"><input type="text" name="name"></td></tr>
+<tr><th align="center">Age</th><td align="center"><select name="age">
+<option value="none">---------------Select---------------</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option></select></td></tr>
+<tr><th align="center">Password</th><td align="center"><input type="password" name="pwd" placeholder="Enter Your Password"></td></tr>
+<tr><th align="center">Re-enter Password</th><td align="center"><input type="password" name="rpwd" placeholder="Re-enter Password"></td></tr>
+<tr><th align="center">Email Id</th><td align="center"><input type="text" name="email"></td></tr>
+<tr><th align="center">Phone Number</th><td align="center"><input type="number" name="mob"></th></tr>
+<tr><th align="center"><input type="reset" name="reset" value="CLEAR"></th><th align="center"><input type="submit" name="submit" value="SUBMIT"></th></tr>
+</table>
+</form>
+<br>
+</body>
+</html>
