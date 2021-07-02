@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=<1.0>">
+    
+    <title>REGISTRATION FORM</title>
+
+    <script>
+        function validate(){
+            var uname= document.getElementById("name");
+            var adres = document.getElementById("adr");
+            var mob = document.getElementById("mob");
+
+            if((uname.value.trim()=="") || (adres.value.trim()=="") || (mob.value.trim()=="")) {
+                alert("You can't leave these fields blank. . .!!!!")
+                return false;
+
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+
+</head>
+
+<body style="background-color: antiquewhite;"> 
+    <h2>Please provide your details here</h2>
+    <form  onsubmit="return validate()" action="users.html" method="POST">
+        <table cellpadding="5" cellspacing="10">
+        <tr>
+            <td> <input placeholder="Full Name"type="text" name="uname" value="" id="name"></td>
+        </tr>
+        <tr>
+            <td><input placeholder="Address"type="text" name="address" value="" id="adr"></td>
+        </tr>
+        <tr>
+            <td><input placeholder="Mobile number"type="text" name="phone" value="" id="mob"></td>
+        </tr>
+        <br>
+        <tr>
+            <td><input type="submit" name="submit" value="Submit"></td>
+        </tr>
+
+    </table>
+
+    </form> 
+
+</body>
+<br><br><br><br><br>
+     <div style=" background-color:hotpink;
+                padding: 20px;
+                width: 100%;" >
+        <h2><a href="main.html">HOME</a></h2>
+        </div>
+
+</html>
